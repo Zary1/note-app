@@ -1,0 +1,376 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;1,200;1,300&display=swap');
+
+#a{
+    background-color: aqua;
+    width: 300px;
+    height: 300px;
+     
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+.container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    
+ 
+
+}
+.add-card{
+    width: 390px;
+    height: 350px;
+    border: 2px dashed rgb(3, 60, 3);
+    border-radius: .5rem;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.add-card i{
+   font-size: 45px;
+   cursor: pointer;
+}
+.add-card p{
+    font-size: 40px;
+    cursor: pointer;
+}
+.blocos{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 100px;
+}
+.left{
+    margin-right:80px;
+}
+
+.left span .fa-plus-circle{
+    font-size: 3.5rem;
+    margin: 30px 50px;
+  
+}
+.left .cards{
+    margin-top: -20px;
+    
+}
+.cards li p{
+    padding: 5px 7px ;
+    color: blue;
+    font-size: 1.5em;
+    font-weight: 900;
+}
+.cards li{
+    
+    border-radius: 40%;
+    height: 30px;
+    width: 40px;
+    cursor: pointer;
+    list-style: none;
+    margin: 10px;
+    animation: listaLi .5s ease-in-out;
+   
+
+
+}
+  .hide li{
+    display: none;
+  
+  
+   
+}
+
+.rigth{
+ width: 100%;
+ margin-left: -80px;
+}
+.rigth .title-note h3{
+    color: black;
+    font-size: 2.5rem;
+
+}
+.cart-title{
+    width: 285px;
+    height: 300px;
+    margin: 10px 0;
+}
+.rigth .title-note span{
+    cursor: pointer;
+    font-size: 20px;
+}
+.rigth .card-container{
+    grid-template-columns: repeat(3,40rem);
+    display: grid;
+    margin-left: 40px;
+    gap:10px;
+    transform: translateY(0);
+    margin-top: 20px;
+    
+}
+
+ #emonji .flex-emoji{
+    display: flex;
+    width: 1200px;
+    height: 6vh;
+    background-color: antiquewhite;
+    border-radius: 5rem;
+    margin-top: -10px;
+    margin-left: 10px;
+    animation: fadeInRight 1s ease-in-out;
+ }
+ @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-10%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+#emonji{
+    display: flex;
+    margin-top: -10px;
+   
+}
+#emonji .emonjis{
+    font-size: 2.5rem;
+    padding-top: 5px;
+    padding-left: 15px;
+    cursor: pointer;
+    list-style: none;
+}
+#emonji .flex-emoji.hides {
+    display: none;
+
+}
+#emonji #emonji-click{
+    font-size: 3rem;
+    width: 60px;
+    border-radius:5rem;
+    height: 6vh;
+    background-color: antiquewhite;
+    padding-left: 8px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+.card{
+    background-color: bisque;
+    height: 350px;
+    flex-direction: column;
+    display: flex;
+    border-radius: 11px;
+    padding: 15px;
+    width: 390px;
+    justify-content: space-between;
+    margin-top: 20px;
+    
+    
+
+}
+.card .delete{
+    color: red;
+    font-size: 2rem;
+    margin: -10px 330px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.card textarea{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: .5rem;
+    font-size: 20px;
+
+}
+.addCard{
+  
+    animation: addCard 0.5s  linear;
+}
+.ed-save{
+    display: flex;
+   justify-content: end;
+   cursor: pointer;
+   margin-top: 20px;
+   
+}
+.card-edit{
+    font-size: 20px;
+    color: blue;
+    display: block;
+    
+}
+.card-edit.editar{
+    display: none;
+}
+.card-save{
+    display: none;
+    font-size: 20px;
+    color: green;
+   
+}
+.card-save.salvar{
+    display: block;
+  
+}
+.card-fooder{
+    display: flex;
+    justify-content: space-between;
+}
+
+.data{
+    font-size: 20px;
+    margin-top:20px;
+    margin-left: 10px;
+    font-weight:bold;
+}
+@keyframes addCard{
+   
+    100%{transform: translate(1%)scale(1);}
+
+}
+@keyframes listaLi{
+    0%{transform: translate(20%,-120%)scale(0.02);}
+ 
+    100%{transform: translate(0,0)scale(1);}
+    
+
+}
+
+
+/* media query */
+@media(max-width:450px) {
+   
+    .container{
+        margin: 0 -20px;
+        max-width: 600px;
+    }
+   
+   html{
+    font-size: 50%;
+   }
+    .card{
+        max-width: 300px;
+        height: 10px;
+        margin-left:-50px;
+        
+    }
+    .card .delete{
+       color: white;
+        float: left;
+        transform: translateX(-50px);
+        
+    }
+    .add-card{
+        width: 230px;
+        height: 250px;
+        margin-top: -250px;
+       
+    }
+    #emonji{
+        height: 300px;
+    }
+    #emonji .flex-emoji{
+        animation: fadeInRight 1s ease-in-out; 
+        margin-left: 220px;
+        max-width: 250px;
+        height: 250px;
+    
+      
+        
+    
+       
+        
+    } 
+    
+   
+}
+
+
+
+@media(max-width:780px) {
+    .container{
+    
+        max-width: 600px;
+    }
+   html{
+    font-size: 50%;
+   }
+    .left{
+        margin-left:-100px;
+    }
+    
+
+    .rigth .title-note h3{
+        color: black;
+        font-size: 3rem;
+        padding: -20px 30px;
+    
+    }
+    
+    #emonji .flex-emoji{
+        animation: fadeInRight 1s ease-in-out;
+        margin-top: 30px;
+        width: 350px;
+        height: 30vh;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-left: -80px;
+        
+       
+        
+        
+    } 
+    #emonji .flex-emoji li{
+      padding: 15px;
+        margin-left: -40px; 
+        
+    }
+    .card{
+        height:40vh ;
+        width: 350px;
+    }
+   
+    .rigth .card-container{
+        grid-template-columns: repeat(1,40rem);
+        display: grid;
+        margin-left: -25px;
+        gap:10px;
+    } 
+    .cards{ 
+        animation: addCard 0.5s  ease-in-out;
+    }
+    
+    @keyframes addCard{
+        100%{transform: translateX(1%)scale(1);}
+    
+    }
+    @keyframes fadeInRight{
+       
+        100%{transform: translateX(1%)scale(1);}
+         
+    
+    }
+    .card .delete{
+        color: red;
+        margin: -10px 300px;
+        
+        
+    }
+    .add-card{
+        width: 300px;
+        height: 250px;
+        margin-top: -10px;
+       
+    }
+}
